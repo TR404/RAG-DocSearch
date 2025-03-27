@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
@@ -28,11 +28,11 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/
+          pytest src.tests/
 
       - name: Build Docker image
         run: |
-          docker build -t python-backend .
+          docker build -t rag_docsearch .
 
       - name: Push Docker image
         env:

@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: rag_docsearch
+    container_name: rag_doc_search_container
     ports:
       - "8000:8000"
     volumes:

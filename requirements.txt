@@ -5,9 +5,9 @@ psycopg2-binary==2.9.3
 pydantic-settings==2.8.1;
 python-jose[cryptography]==3.4.0 
 passlib==1.7.4
-celery==5.4.0
-redis==5.2.1
-alembic==1.15.1
+# celery==5.4.0
+# redis==5.2.1
+alembic==1.14.1
 python-multipart==0.0.20
 bcrypt==3.2.2
 eventlet==0.39.1
