@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest src.tests/
+          pytest --asyncio-mode=auto --cov=src --cov-report=html   
 
       - name: Build Docker image
         run: |
