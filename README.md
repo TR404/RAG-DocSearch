@@ -73,7 +73,7 @@ RAG-DocSearch
 
 3. **Run the application:**
    ```bash
-   uvicorn src.app:app --host 0.0.0.0 --port 8000
+   uvicorn src.main:app --host 0.0.0.0 --port 8000
    ```
 
 4. **Access the APIs:**
@@ -123,7 +123,7 @@ RAG-DocSearch
    - The project includes a `Dockerfile` and `docker-compose.yml` for containerization.
    - To build and run the application using Docker:
      ```bash
-     docker-compose up --build
+     docker-compose up --build -d
      ```
 
 2. **CI/CD Pipeline**:
