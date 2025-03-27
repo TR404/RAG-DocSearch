@@ -82,6 +82,23 @@ RAG-DocSearch
    - Document Selection API: `/v1/documents/selection` (Allows users to specify documents for Q&A)
    - Q&A API: `/v1/qa/ask` (Accepts user questions and retrieves answers using RAG)
 
+## Setting Up Environment Variables
+
+Create a `.env` file in the root directory of the project and add the following environment variables:
+
+```properties
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=mydatabase
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+SECRET_KEY=<secret_key_jwt_token>  # Replace with your JWT secret key
+ALGORITHM=HS256
+OPENAI_API_KEY=<api_key>           # Replace with your OpenAI API key
+OPENAI_ORGANIZATION_ID=<org_id>    # Replace with your OpenAI organization ID
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+
 ## API Usage
 
 ### **Document Ingestion API**
