@@ -24,31 +24,38 @@ The application is designed to manage users, documents, and an ingestion process
 ## Project Structure
 
 ```
-python-backend
+RAG-DocSearch
 ├── src
-│   ├── app.py                  # Entry point of the application
-│   ├── ingestion
-│   │   └── document_ingestion.py # Document Ingestion API
-│   ├── qna
-│   │   └── qna_api.py          # Q&A API
-│   ├── selection
-│   │   └── document_selection.py # Document Selection API
-│   ├── utils
-│   │   └── async_utils.py       # Utility functions for async programming
-│   └── models
-│       └── embedding_model.py    # Data model for embeddings
-├── tests
-│   ├── test_ingestion.py        # Unit tests for Document Ingestion API
-│   ├── test_qna.py              # Unit tests for Q&A API
-│   ├── test_selection.py         # Unit tests for Document Selection API
-│   └── test_utils.py            # Unit tests for utility functions
-├── Dockerfile                    # Docker image build instructions
-├── docker-compose.yml            # Multi-container Docker application configuration
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
+│   ├── main.py                  # Entry point of the RAG-DocSearch application
+│   ├── models
+│   │   └── document.py          # Database models for document ingestion and retrieval
+│   │   └── user.py              # Database models for user management
+│   ├── routers
+│   │   └── auth.py              # API endpoints for user authentication and authorization
+│   │   └── document.py          # API endpoints for document ingestion and selection
+│   │   └── qa.py                # API endpoints for Q&A functionality
+│   ├── schemas
+│   │   └── document.py          # Pydantic schemas for document-related requests and responses
+│   │   └── user.py              # Pydantic schemas for user-related requests and responses
+│   ├── services
+│   │   └── auth.py              # Business logic for authentication and token management
+│   │   └── openai_service.py    # Integration with OpenAI API for embedding generation
+│   │   └── text_extraction.py   # Logic for extracting text from documents
+│   │   └── validate_token.py    # Token validation and utility functions
+│   ├── settings
+│   │   └── base.py              # Application configuration and environment settings
+│   │   └── database.py          # Database connection and initialization logic
+│   └── tests
+│       └── test_auth.py         # Unit tests for authentication functionality
+│       └── test_main.py         # Unit tests for the main application
+│       └── test_qa.py           # Unit tests for Q&A functionality
+├── Dockerfile                    # Instructions to build the Docker image for the application
+├── docker-compose.yml            # Configuration for running multi-container Docker applications
+├── requirements.txt              # List of Python dependencies for the project
+├── README.md                     # Documentation for the RAG-DocSearch project
 └── .github
     └── workflows
-        └── ci-cd.yml            # CI/CD pipeline configuration
+        └── ci-cd.yml            # CI/CD pipeline configuration for automated testing and deployment
 ```
 
 ## Setup Instructions
