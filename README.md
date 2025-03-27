@@ -155,6 +155,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 ## Testing
 
 - The project uses `pytest` and `pytest-asyncio` for unit testing.
+   ```bash 
+   pytest --asyncio-mode=auto --cov=src --cov-report=html 
+   ```
 - Test coverage is targeted at 70% or higher.
 - Tests include positive and negative workflows for all APIs.
 
